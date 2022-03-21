@@ -1,0 +1,92 @@
+* {
+    box-sixing: border-box; 
+    /* which makes sizing elemnts based on certain length easier */
+}
+
+body {
+    margin: 0;
+    background-color: rgb(184, 203, 219);
+
+}
+
+html {
+    min-height: 100vh;
+}
+
+.game-title {
+    color: red;
+    text-align: center;
+}
+
+.game-info-container {
+    /* info needs to take up the entire first row */
+    grid-column: 1 / -1;
+    /* to get text side by side */
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color: orange;
+    text-align: center;
+}
+
+.game-container {
+    display: grid;
+    /* four columns that will auto size by whatever element */
+    grid-template-columns: repeat(4, auto);
+    /* to better space each element */
+    grid-gap: 10px;
+    margin: 50px;
+    /* center align the gridinside of the screen */
+    justify-content: center;
+}
+.card {
+    background-color: black;
+    height: 175px;
+    width: 125px;
+    cursor: pointer;
+   
+
+  
+}
+
+.card:hover{
+    box-shadow: 1px 1px 5px 5px rgb(234, 238, 5);
+    
+}
+
+
+
+.card, .card-back {
+    background-color: black;
+    /* its going to be overlapping since its going to be in the same space*/
+    height: 175px;
+    width: 125px;
+    border-radius: 10%; 
+    box-shadow: 1px 3px 20px 0px rgb(172, 21, 21);
+
+}
+ 
+.card-front {
+    transform: rotateY(-180deg);
+
+}
+    
+.card .card-front {
+    background-image: url(https://heavy.com/wp-content/uploads/2019/11/princess-leia.jpg?quality=65&strip=all);
+    height: 175px;
+    width: 125px;
+    border-radius: 10%; 
+    box-shadow: 1px 3px 20px 0px rgb(172, 21, 21);
+
+}
+.card-visible .card-back {
+    /* set to why so it looks like a card flip */
+    transform: rotateY(-180deg);
+  }
+  
+  .card-visible .card-front {
+    transform: rotateY(0)
+  }
+
