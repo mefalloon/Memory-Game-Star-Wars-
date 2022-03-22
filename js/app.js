@@ -32,15 +32,22 @@ if (cardA.dataset.framework ===
             //1 second = 1000 milliseconds
             }, 1050);
         }
-        allCards.forEach(card => card.addEventListener('click', flipcard));
-
-
-
-
-
        // console.log(turnedCard, cardA);
       // console.log({cardA, cardB});
       //console.log(cardA.dataset.framework);
      // console.log(cardB.dataset.framework);
     }
 }
+(function shuffle() {
+    allCards.forEach(card => {
+        //returns a number b/t 0-1 xcluded 1
+        let randomCards = Math.floor(Math.random() * 12);
+        //multply by 12 for 12 cards
+        card.style.order = randomCards;
+        //shuffle needs to start before games does
+    });
+    })();
+allCards.forEach(card => card.addEventListener('click', flipcard));
+
+// Must create a random algorthium for cards
+//assign a number to each card and make it random
