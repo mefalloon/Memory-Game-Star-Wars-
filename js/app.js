@@ -1,14 +1,26 @@
-const allCards = document.querySelectorAll('.cards');  
+const allCards = document.querySelectorAll('.cards');
 
-function flipCard() {
-    this.classList.toggle('flip')
+let turnedCard = false;
+let cardA;
+let cardB;
+
+function flipcard() {
+    this.classList.add('flip');
+    if(!turnedCard){
+        turnedCard = true;
+        cardA = this;
+    } else {
+        turnedCard = false;
+        cardB = this;
+    
+
+
+       // console.log(turnedCard, cardA);
+      // console.log({cardA, cardB});
+      console.log(cardA.dataset.framework);
+      console.log(cardB.dataset.framework);
+    }
 }
-
-//loop through with a for each /attach a listener/ onclick
-allCards.forEach(card => card.addEventListener('click', flipCard));
-
-// the card needs to wait for one card to be clicked
-
-allCards.forEach(card => card.addEventListener('click', flipCard));
+allCards.forEach(card => card.addEventListener('click', flipcard));
 
 
