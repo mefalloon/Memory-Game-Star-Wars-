@@ -1,30 +1,9 @@
 console.log('hey')
+// array of card images
+const allCards = ["Ash.png", "bigears.png", "bulbasaur.png", "charmander", 
+"jigglypuff.png", "mew.png", "pikachu.png", "squirtle.png"
+]
 
-// DETERMINE WHAT ELEMENTS WILL BE IN THE GAME
+const cards = Array.from(document.querySelectorAll('card-visible'));
 
-//HOW WILL USER INTERACT WITH THE ELEMENTS
-
-//USER MUST CLICK A BUTTON TO START GAME
-
-// CLASS FOR EACH CARD? OR ARRAY FOR EACH CARD
-
-//USER WILL HAVE TO CLICK AND FLIP OVER A CARD
-
-//HOW CARD WILL FLIP ?
-
-//WRITE A SEQUENCE TO TIME FLIP AT THE SAME TIME 
-
-//MUST CREATE A IF ELSE TO TO COMPARE CARDS
-
-//IF 'A' IS EQUAL TO 'B' THEN ITS TRUE IF ELSE ITS FALSLE 
-
-//PLAYER CAN PICK AGAIN 
-
-//WHEN THE PLAYER PICKS THE SAME CARD IT TAKES FLIPPEED OVER 
-
-//A ALERT FLASHES WHEN CORRECT
-
-//PLAYER CAN PAUSE OR RESET GAME
-
-// HOW 
 
