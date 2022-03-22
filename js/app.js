@@ -1,17 +1,17 @@
-console.log('hey')
+//console.log('hey')
 // array of cards
-const allCards = document.querySelectorAll('cards')  
+const allCards = document.querySelectorAll('.cards');  
 //loop through with a for each /attach a listener/ onclick
-function flipCard(){
+function flipCard() {
     this.classList.toogle('flip');
 }
+allCards.forEach(card => card.addEventListener('click', flipCard));
 
-cards.forEach(card =>)
-
-
-
+//console.log(allCards);
 
 
-const cards = Array.from(document.querySelectorAll('card-visible'));
+
+
+
 
 
