@@ -51,7 +51,8 @@ body {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
- 
+   
+
 
   
 
@@ -75,6 +76,7 @@ body {
     border-radius: 10px;
     backface-visibility: hidden;
   
+  
   }
 
   .front-card {
@@ -82,9 +84,6 @@ body {
     transform: rotateY(180deg);
   }
 
-  .front-card, .back-card:hover {
-    
-  }
 
   .back-card:hover {
     box-shadow: 1px 1px 7px 8px rgb(209, 208, 208);
