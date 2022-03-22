@@ -6,6 +6,7 @@ let cardB;
 
 function flipcard() {
     this.classList.add('flip');
+    
     if(!turnedCard){
         turnedCard = true;
         cardA = this;
@@ -15,13 +16,27 @@ function flipcard() {
     
 if (cardA.dataset.framework === 
     cardB.dataset.framework) {
-
+        // match sequence
         cardA.removeEventListener('click', flipcard);
         cardB.removeEventListener('click', flipcard);
-          
-console.log('A MATCH!')
+        // if not a match then it will not flip the card (below)
+    } else {
+         // second while the 2nd click gets stuck
+         //adding both wont let the inccorect match to turn over
+         // set a time for how long the inccorect card can stay open
+        // cardDelay = setTimeout(cardA.classList.remove('flip'), 1200);
+        //             setTimeout(cardB.classList.remove('flip'), 1200);
+        setTimeout(() => {
+            cardA.classList.remove('flip');
+            cardB.classList.remove('flip');
+            //1 second = 1000 milliseconds
+            }, 1050);
+        }
+        allCards.forEach(card => card.addEventListener('click', flipcard));
 
-}
+
+
+
 
        // console.log(turnedCard, cardA);
       // console.log({cardA, cardB});
@@ -29,6 +44,3 @@ console.log('A MATCH!')
      // console.log(cardB.dataset.framework);
     }
 }
-allCards.forEach(card => card.addEventListener('click', flipcard));
-
-
