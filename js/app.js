@@ -13,12 +13,20 @@ function flipcard() {
         turnedCard = false;
         cardB = this;
     
+if (cardA.dataset.framework === 
+    cardB.dataset.framework) {
 
+        cardA.removeEventListener('click', flipcard);
+        cardB.removeEventListener('click', flipcard);
+          
+console.log('A MATCH!')
+
+}
 
        // console.log(turnedCard, cardA);
       // console.log({cardA, cardB});
-      console.log(cardA.dataset.framework);
-      console.log(cardB.dataset.framework);
+      //console.log(cardA.dataset.framework);
+     // console.log(cardB.dataset.framework);
     }
 }
 allCards.forEach(card => card.addEventListener('click', flipcard));
