@@ -38,6 +38,8 @@ if (cardA.dataset.framework ===
      // console.log(cardB.dataset.framework);
     }
 }
+// Must create a random algorthium for cards
+//assign a number to each card and make it random
 (function shuffle() {
     allCards.forEach(card => {
         //returns a number b/t 0-1 xcluded 1
@@ -49,5 +51,23 @@ if (cardA.dataset.framework ===
     })();
 allCards.forEach(card => card.addEventListener('click', flipcard));
 
-// Must create a random algorthium for cards
-//assign a number to each card and make it random
+const countDown = document.querySelector (".time");
+//variable to stop timer
+let timer;
+//variable starts at 0
+let minutes = 0;
+let seconds = 0;
+
+//for listener
+let startTime = false;
+
+function time(){
+timer = setInterval(function() {
+    seconds++;
+    if(seconds === 60) {
+        minutes++;
+        seconds = 0;
+    }
+    countDown.innerHTML =  " Timer: " + minutes + " Mins " + seconds + " Secs" ;
+	}, 1000);
+}
