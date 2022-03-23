@@ -1,104 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Memory Game: Star Wars Edition!</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <div class="logo-img">
-    <img src="./js/SWC/sw_logo.png" alt="star wars" class="logo" width="300" height="300">
-    <img>
-</div>
+      <div class="logo-img">
+        <img
+          src="./js/SWC/sw_logo.png"alt="star wars"class="logo"
+          width="300"
+          height="300"
+        />
+        <img />
+      </div>
 
-    
+      <div class="overlay-text visible">Click to Join the Rebellion
+    </div> 
 
-  
-        <!-- contains time and number of flips -->
-        <div class="game-info-container"> 
-            <p class="Game-rules">Catch all the cards before time runs out!</p>
-            <div class="game-info"> 
-                Time: <span id="timer">100</span> 
-                <!-- 100 is starting time and can change in javascript later due to wrapping it in span -->
-            </div>
+
+
+
+
+
+      <!-- contains time and number of flips -->
+      <div class="game-info-container">
+        <p class="Game-rules">Catch all the cards before time runs out!</p>
+        <div class="game-info">
+          Time: <span id="time">01:00</span>
+          <!-- 100 is starting time and can change in javascript later due to wrapping it in span -->
         </div>
+      </div>
     </div>
-            
-        
-        
-        <section class="memory-game">
 
-                <div class="cards" data-framework="anakin">
-                    <img class="front-card" src="./js/SWC/anakin.png" alt="Anakin Skywalker">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+    <section class="memory-game">
+      <div class="cards" data-framework="anakin">
+        <img
+          class="front-card"
+          src="./js/SWC/anakin.png"
+          alt="Anakin Skywalker"
+        />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="anakin">
-                    <img class="front-card" src="./js/SWC/anakin.png" alt="Anakin Skywalker">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="anakin">
+        <img
+          class="front-card"
+          src="./js/SWC/anakin.png"
+          alt="Anakin Skywalker"
+        />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="chewy">
-                    <img class="front-card" src="./js/SWC/chewy.png" alt="Chewbecca">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="chewy">
+        <img class="front-card" src="./js/SWC/chewy.png" alt="Chewbecca" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="chewy">
-                    <img class="front-card" src="./js/SWC/chewy.png" alt="Chewbecca">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="chewy">
+        <img class="front-card" src="./js/SWC/chewy.png" alt="Chewbecca" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards"  data-framework="solo">
-                    <img class="front-card" src="./js/SWC/han.png" alt="Han Solo">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="solo">
+        <img class="front-card" src="./js/SWC/han.png" alt="Han Solo" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="solo">
-                    <img class="front-card" src="./js/SWC/han.png" alt="Han Solo">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="solo">
+        <img class="front-card" src="./js/SWC/han.png" alt="Han Solo" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="princess">
-                    <img class="front-card" src="./js/SWC/leia.png" alt="Princess Leia">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="princess">
+        <img class="front-card" src="./js/SWC/leia.png" alt="Princess Leia" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
+      <div class="cards" data-framework="princess">
+        <img class="front-card" src="./js/SWC/leia.png" alt="Princess Leia" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="princess">
-                    <img class="front-card" src="./js/SWC/leia.png" alt="Princess Leia">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="obi">
+        <img class="front-card" src="./js/SWC/obi.png" alt="Obi-Wan Kenobi" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
+      <div class="cards" data-framework="obi">
+        <img class="front-card" src="./js/SWC/obi.png" alt="Obi-Wan Kenobi" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="obi">
-                    <img class="front-card" src="./js/SWC/obi.png" alt="Obi-Wan Kenobi">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="R2">
+        <img class="front-card" src="./js/SWC/r2.png" alt="R2 d2" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
 
-                <div class="cards" data-framework="obi">
-                    <img class="front-card" src="./js/SWC/obi.png" alt="Obi-Wan Kenobi">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
-
-                <div class="cards" data-framework="R2">
-                    <img class="front-card" src="./js/SWC/r2.png" alt="R2 d2">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
-
-                <div class="cards" data-framework="R2">
-                    <img class="front-card" src="./js/SWC/r2.png" alt="R2 d2">
-                    <img class="back-card" src="./js/SWC/cardhead.png" alt="Storm Trooper">
-                </div>
+      <div class="cards" data-framework="R2">
+        <img class="front-card" src="./js/SWC/r2.png" alt="R2 d2" />
+        <img
+          class="back-card"
+          src="./js/SWC/cardhead.png"
+          alt="Storm Trooper"
+        />
+      </div>
     </section>
-
-        
-
-    
-</body>
+  </body>
 </html>
-
