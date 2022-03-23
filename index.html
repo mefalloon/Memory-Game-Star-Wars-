@@ -40,11 +40,36 @@
       <div class="game-info-container">
         <p class="Game-rules">Click the cards to collect all matches and save <br>the galaxy from embedding doom before time runs out</br></p>
         <div class="game-info">
-          Time: <span id="time">01:00</span>
+          <!-- Time: <span id="time">01:00</span> -->
           <!-- 100 is starting time and can change in javascript later due to wrapping it in span -->
+          <section class="win-game-">
+            <div id="winner" class="gamewon">
+                <div class="winner-content">
+                    <span class="close">&times;</span>
+    
+				<h2>Congratulations!</h2>
+				<p>You have won the game and found all 8 pairs of cards.</p>
+				<img class="winner-img" src="./js/SWC/Loser.png" alt="yoda advice"
+                width="300"
+                height="300">
+				<button class="btn play-again-btn">Play Again?</button>
+            </div>
+			</div>
+            </section>
+		</div>
+
         </div>
       </div>
     </div>
+
+    @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
 
     <section class="memory-game">
       <div class="cards" data-framework="anakin">
