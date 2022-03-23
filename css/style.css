@@ -37,26 +37,26 @@ body {
   bottom: 0;
   height: 100%;
   text-align: center;
-  display: flex;  
   justify-content: center;
   align-items: center;
   z-index: 100;
   color: rgb(133, 37, 37);
 }
 
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
 
+}
 
 
 .overlay-text-small{
   display: flex;
- font-size: .3em;
+ font-size: 30px;
 }
 
-.overlay-text.visible {
-  display: flex;
-  animation: overlay-grow 500ms forwards;
 
-}
 
 
 /* Make an element move gradually */
@@ -67,7 +67,7 @@ body {
 ;  }
   to{
     background-color: rgba(0, 0, 0, .8);
-    font-size: 10em;
+    font-size: 5em;
 
   }
 } 

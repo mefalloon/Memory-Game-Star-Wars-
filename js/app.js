@@ -1,3 +1,21 @@
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loaded());
+} else {
+    loaded();
+}
+
+// grab all overlays from Dom
+//what ever your giv Array.from will creat one
+function loaded() {
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+
+    //Create a way to add a event listener for all overlays
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+        overlay.classList.remove('visible');
+    });
+})
+
 const allCards = document.querySelectorAll('.cards');
 
 let turnedCard = false;
@@ -50,24 +68,4 @@ if (cardA.dataset.framework ===
     });
     })();
 allCards.forEach(card => card.addEventListener('click', flipcard));
-
-const countDown = document.querySelector (".time");
-//variable to stop timer
-let timer;
-//variable starts at 0
-let minutes = 0;
-let seconds = 0;
-
-//for listener
-let startTime = false;
-
-function time(){
-timer = setInterval(function() {
-    seconds++;
-    if(seconds === 60) {
-        minutes++;
-        seconds = 0;
-    }
-    countDown.innerHTML =  " Timer: " + minutes + " Mins " + seconds + " Secs" ;
-	}, 1000);
 }
