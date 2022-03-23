@@ -16,6 +16,7 @@ function loaded() {
     });
 })
 
+
 const allCards = document.querySelectorAll('.cards');
 
 let turnedCard = false;

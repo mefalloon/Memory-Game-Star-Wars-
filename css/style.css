@@ -4,7 +4,16 @@
     box-sizing: border-box;
     
   }
+  @font-face {
+    font-family: jedifont;
+    src: url("../starjedi/stjedise/STJEDISE.TTF");
+  }
 
+  @font-face {
+    font-family: spacefont;
+    src: url("../js/SWC/conthrax-sb.ttf");
+  }
+  
   
 body {
     background-image: url('https://cdn.wallpapersafari.com/1/97/co341S.jpg');
@@ -40,8 +49,11 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  color: rgb(133, 37, 37);
+  color: rgb(143, 75, 75);
+  font-family: jedifont, sans-serif;
+  text-shadow: 12px 6px #420202;
 }
+
 
 .overlay-text.visible {
   display: flex;
@@ -80,7 +92,25 @@ body {
 .Game-rules {
   color: aliceblue;
   text-align: center;
+  font-family: spacefont, sans-serif;
+  font-size: 15px;
+  margin 0 auto;
+  width: 0 auto;
+  text-decoration: ;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(221, 208, 25), 0 0 20px rgb(211, 192, 19), 0 0 30px #cecece, 0 0 40px #e60000, 0 0 50px #ff2803, 0 0 60px #e60000, 0 0 70px #e60000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #aaa3a7, 0 0 50px #c7c6c6, 0 0 60px #8f8d8e, 0 0 70px #ffffff, 0 0 80px #d8d2d5;
+  }
+}
+
 
   .memory-game {
     width: 540px;
