@@ -81,8 +81,18 @@ display: flex;
 font-size: 30px;
 }
 
-.winner {
-color: #d8d2d5;
+.winner-img {
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 
 .hide{
@@ -108,7 +118,7 @@ color: aliceblue;
 text-align: center;
 }
 
-.game-info, .time {
+.game-info, {
 font-size: 25px;
 font-family: spacefont, sans-serif;
 }
@@ -127,14 +137,25 @@ text-decoration: ;
 animation: glow 1s ease-in-out infinite alternate;
 }
 
+.countdown {
+  color: aliceblue;
+  text-align: center;
+  font-family: spacefont, sans-serif;
+  font-size: 15px;
+  margin 0 auto;
+  width: 0 auto;
+
+
+}
+/* 
 @-webkit-keyframes glow {
-from {
-  text-shadow: 0 0 10px rgb(221, 208, 25), 0 0 20px rgb(211, 192, 19), 0 0 30px #cecece, 0 0 40px #e60000, 0 0 50px #ff2803, 0 0 60px #e60000, 0 0 70px #e60000;
-}
-to {
-  text-shadow: 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #aaa3a7, 0 0 50px #c7c6c6, 0 0 60px #8f8d8e, 0 0 70px #ffffff, 0 0 80px #d8d2d5;
-}
-}
+  from {
+    text-shadow: 0 0 10px rgb(221, 208, 25), 0 0 20px rgb(211, 192, 19), 0 0 30px #cecece, 0 0 40px #e60000, 0 0 50px #ff2803, 0 0 60px #e60000, 0 0 70px #e60000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #aaa3a7, 0 0 50px #c7c6c6, 0 0 60px #8f8d8e, 0 0 70px #ffffff, 0 0 80px #d8d2d5;
+  }
+  } */ 
 
 /* CARDS */
 .memory-game {
@@ -179,7 +200,7 @@ transform: rotateY(180deg);
 
 
 }
-
+/* BLUR */
 .front-card {
   box-shadow: 1px 1px 7px 15px rgb(133, 37, 37);
   transform: rotateY(180deg);
