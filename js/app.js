@@ -1,22 +1,22 @@
+//state of its loading process.
+//once loaded -- it will call the fuction given
 if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loaded());
-} else {
+    document.addEventListener('DOMContentLoaded', loaded()); 
+} else {// if not its already loaded
     loaded();
 }
 
 // grab all overlays from Dom
-//what ever your giv Array.from will creat one
 function loaded() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let overlays = Array.from(document.getElementsByClassName('overlay-text')); 
 
     //Create a way to add a event listener for all overlays
     overlays.forEach(overlay => {
+        //for each overlay we want to add a listener
         overlay.addEventListener('click', () => {
         overlay.classList.remove('visible');
     });
-})
-
-
+});
 
 const allCards = document.querySelectorAll('.cards');
 
@@ -52,10 +52,6 @@ if (cardA.dataset.framework ===
             //1 second = 1000 milliseconds
             }, 1050);
         }
-       // console.log(turnedCard, cardA);
-      // console.log({cardA, cardB});
-      //console.log(cardA.dataset.framework);
-     // console.log(cardB.dataset.framework);
     }
 }
 // Must create a random algorthium for cards
@@ -70,84 +66,6 @@ if (cardA.dataset.framework ===
     });
     })();
 allCards.forEach(card => card.addEventListener('click', flipcard));
+
 }
 
-////
-const winner = document.getElementById("modal");
-const reset = document.querySelector(".reset-btn");
-const playAgain = document.querySelector(".play-again-btn");
-
-// Access the reset button
-
-function displayModal() {
-// Access the modal <span> element (x) that closes the modal
-const modalClose = document.getElementsByClassName("close")[0];
-	// When the game is won set modal to display block to show it
-	winner.style.display= "block";
-
-	// When the user clicks on <span> (x), close the modal
-	modalClose.onclick = function() {
-		winner.style.display = "none";
-	};
-// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == winner) {
-			winner.style.display = "none";
-		}
-	};
-}
-
-function winGame() {
-	if (matched.length === 12) {
-	
-		displayModal();
-	}
-}
-
-deck.addEventListener("click", function(evt) {
-	if (evt.target.nodeName === "LI") {
-		// To console if I was clicking the correct element 
-		console.log(evt.target.nodeName + " Was clicked");
-		// Start the timer after the first click of one card
-	// Executes the timer() function
-		if (timeStart === false) {
-			timeStart = true; 
-			timer();
-		}
-		// Call flipCard() function
-		flipCard();
-	}
-
-	//Flip the card and display cards img
-	function flipCard() {
-		// When <li> is clicked add the class .flip to show img
-		evt.target.classList.add("flip");
-		// Call addToOpened() function
-		addToOpened();
-	}
-	 
-	//Add the fliped cards to the empty array of opened
-	function addToOpened() {
-		/* If the opened array has zero or one other img push another 
-		img into the array so we can compare these two to be matched
-		*/
-		if (opened.length === 0 || opened.length === 1) {
-			// Push that img to opened array
-			opened.push(evt.target.firstElementChild);
-		}
-		// Call compareTwo() function
-		compareTwo();
-	}
-}); //Event Listener
-
-
-reset.addEventListener('click', resetEverything);
-
-/*
-Event Listener to listen for a click on the play
-again button, once clicked call resetEverything()
-*/
-playAgain.addEventListener('click',function() {
-	winner.style.display = "none";
-	resetEverything();
-});
