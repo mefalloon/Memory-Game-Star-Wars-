@@ -19,7 +19,7 @@ function loaded() {
     });
   });
 
-  timerBegins()
+ timerBegins()
 }
 ////// Variables
 const allCards = document.querySelectorAll(".cards");
@@ -29,6 +29,7 @@ let turnedCard = false;
 let cardA, cardB;
 let total = 0;
 let seconds = 100;
+
 
 function timerBegins(total){
     setInterval(()=>{
@@ -49,7 +50,7 @@ function timerBegins(total){
 function findWinner(){
     const matchedCards = document.querySelectorAll(".flip");
     if(matchedCards.length === 12) {
-       winner.classList.remove('hide');
+       winner.classList.remove("hide");
     }
 }
 //FLIP EACH CARD
@@ -80,6 +81,7 @@ function flipcard() {
     }
   }
   findWinner() //call function
+  console.log(findWinner)
 }
 //SHUFFLE CARDS
 // Must create a random algorthium for cards
@@ -95,5 +97,4 @@ function flipcard() {
 })();
 
 allCards.forEach((card) => card.addEventListener("click", flipcard));
-
 
