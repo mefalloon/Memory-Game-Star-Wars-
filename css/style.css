@@ -80,8 +80,13 @@ display: flex;
 font-size: 30px;
 }
 
+.winner {
+color: #d8d2d5;
+}
 
-
+.hide{
+  display:none
+}
 
 /* Make an element move gradually */
 @keyframes overlay-grow {
