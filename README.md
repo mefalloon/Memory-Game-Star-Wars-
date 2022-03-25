@@ -9,6 +9,7 @@ CSS
 Javascript
 
 <h6>Where it started</h6> 
+
 ![user journey](./js/SWC/user%20flow.png)
 ![lo-fi wireframe](./js/SWC/wireframe1.png)
 ![hi-fi wireframe](./js/SWC/Frame%2027.png)
@@ -21,6 +22,7 @@ Javascript
 
 
 <h6>Next planned steps</h6>
+
 <ul>Create a reset option</ul>
 <ul>Alert User to lost game when timer runs</ul>
 <ul>Create an intro with audio</ul>
