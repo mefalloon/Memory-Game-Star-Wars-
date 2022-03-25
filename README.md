@@ -1,5 +1,5 @@
 # Project_MemoryGame
-<h1>The Game:</h1>
+<p>The Game:</p>
 Match Wars is a game where you match the corresponding characters together before the time runs out and Darth Vader unleashes the the death star on totolino. Only uou Young jedi can save the galaxy from the embedding doom by matching all pairs.
 
 <b>Technologies:</b>
@@ -14,14 +14,16 @@ Github
 timer starts on first click
 
 
-</b>Rules:
+</b>Rules:</b>
 Player must click a card to view the front card and use their memory to find the match 
 
-</b>How to win?
+</b>How to win?</b>
 Find all matches before time runs out 
 # Project_MemoryGame 
 
 <b>wireframes</b>
+
+![alt text](./js/SWC/wireframe1.png)
 
 
 
