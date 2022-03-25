@@ -18,22 +18,41 @@ function loaded() {
       overlay.classList.remove("visible");
     });
   });
-}
 
+  timerBegins()
+}
+////// Variables
 const allCards = document.querySelectorAll(".cards");
 const winner = document.querySelector('.winner');
-
+const timer = document.querySelector('#countdown');
 let turnedCard = false;
-let lockboard = false; //lockboard so the cards dont turn over when game is over?
 let cardA, cardB;
+let total = 0;
+let seconds = 100;
 
+function timerBegins(total){
+    setInterval(()=>{
+        seconds = seconds - 1
+        timer.innerText = seconds
+        if(total<=0) {
+            interval = clearInterval (interval);
+            winOrLoseEl.innerText = "you lost!"
+        }
+    }, 1000)
+
+
+}
+
+//FIND A WINNER
+// check if all cards are flipped
+// function that uses the winner div and removes the hide
 function findWinner(){
     const matchedCards = document.querySelectorAll(".flip");
     if(matchedCards.length === 12) {
        winner.classList.remove('hide');
     }
 }
-
+//FLIP EACH CARD
 function flipcard() {
   this.classList.add("flip");
   //this keyword refers to different objects depending on how it is used
@@ -59,17 +78,10 @@ function flipcard() {
       }, 1050);
 
     }
-   
-    // check if all cards are flipped
-    // function that uses the winner div and removes the hide
-
-    // WHY CANT YOU PUT THIS TOGETHER GIRL!!
   }
-  findWinner()
+  findWinner() //call function
 }
-
-
-
+//SHUFFLE CARDS
 // Must create a random algorthium for cards
 //assign a number to each card and make it random
 (function shuffle() {
@@ -83,3 +95,5 @@ function flipcard() {
 })();
 
 allCards.forEach((card) => card.addEventListener("click", flipcard));
+
+
