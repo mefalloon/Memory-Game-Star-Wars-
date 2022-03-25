@@ -23,8 +23,11 @@ Find all matches before time runs out
 
 <b>wireframes</b>
 
-![alt text](./js/SWC/wireframe1.png)
+![user flow](./js/SWC/user%20flow.png)
 
+![low fi](./js/SWC/wireframe1.png)
+
+![hi-fi wireframe](./js/SWC/Frame%2027.png)
 
 
 
