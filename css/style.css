@@ -1,4 +1,5 @@
-* {
+/* body */
+*{
   padding: 0;
   margin: 10px 5px 15px;
   box-sizing: border-box;
@@ -48,7 +49,7 @@ margin-right: auto;
 width: 50%;
 padding: 0px 0px 0px 0px;
 }
-
+/* OVERLAY */
 .overlay-text {
 display: none;
 position: fixed; 
@@ -100,6 +101,7 @@ to {
 
 }
 
+/* GAME CONTENT */
 } 
 .game-info {
 color: aliceblue;
@@ -134,7 +136,7 @@ to {
 }
 }
 
-
+/* CARDS */
 .memory-game {
   width: 540px;
   height: 540px;
@@ -154,11 +156,6 @@ to {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-
- 
-
-
-
 
 }
 
