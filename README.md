@@ -14,7 +14,7 @@ Javascript
 ![lo-fi wireframe](./js/SWC/wireframe1.png)
 ![hi-fi wireframe](./js/SWC/Frame%2027.png)
 
-<h6>Episode 1: First iteration/h6>
+<h6>Episode 1: First iteration</h6>
 
 ![hi-fi wireframe](./js/SWC/game.png)
 
