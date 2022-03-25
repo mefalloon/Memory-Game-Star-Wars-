@@ -30,7 +30,7 @@ let cardA, cardB;
 let total = 0;
 let seconds = 100;
 
-
+//Starting time on 
 function timerBegins(total){
     setInterval(()=>{
         seconds = seconds - 1
@@ -81,7 +81,7 @@ function flipcard() {
     }
   }
   findWinner() //call function
-  console.log(findWinner)
+  
 }
 //SHUFFLE CARDS
 // Must create a random algorthium for cards
