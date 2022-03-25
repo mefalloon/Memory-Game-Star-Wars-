@@ -42,7 +42,7 @@ function timerBegins(total){
     }, 1000)
 
 
-}
+};
 
 //FIND A WINNER
 // check if all cards are flipped
